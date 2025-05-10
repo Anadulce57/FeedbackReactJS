@@ -1,6 +1,7 @@
 import iconStar from "../assets/icon-star.svg"
+import { Button } from "./Button"
 
-export function CardInicial({ setSubimited }) {
+export function CardInicial({ setSubimited, rateNote, setRateNote }) {
     function handleSubmit(){
         if (rateNote !== 0){
           setSubimited(true)
@@ -22,11 +23,11 @@ export function CardInicial({ setSubimited }) {
         feedback is apreciated to help us improve our offering!</p>
   
         <div className="flex justify-between mb-6">
-          <button className="bg-dark-blue w-10.5 h-10.5 rounded-full text-sm text-medium-gray focus:bg-medium-gray focus:text-white font-bold hover:bg-orange hover:text-white cursor-pointer duration-400 sm:w-13 sm:h-13" onClick={() => handleChangeRateNote(1)}>1</button>
-          <button className="bg-dark-blue w-10.5 h-10.5 rounded-full text-sm text-medium-gray focus:bg-medium-gray focus:text-white font-bold hover:bg-orange hover:text-white cursor-pointer duration-400 sm:w-13 sm:h-13" onClick={() => handleChangeRateNote(2)}>2</button>
-          <button className="bg-dark-blue w-10.5 h-10.5 rounded-full text-sm text-medium-gray focus:bg-medium-gray focus:text-white font-bold hover:bg-orange hover:text-white cursor-pointer duration-400 sm:w-13 sm:h-13" onClick={() => handleChangeRateNote(3)}>3</button>
-          <button className="bg-dark-blue w-10.5 h-10.5 rounded-full text-sm text-medium-gray focus:bg-medium-gray focus:text-white font-bold hover:bg-orange hover:text-white cursor-pointer duration-400 sm:w-13 sm:h-13" onClick={() => handleChangeRateNote(4)}>4</button>
-          <button className="bg-dark-blue w-10.5 h-10.5 rounded-full text-sm text-medium-gray focus:bg-medium-gray focus:text-white font-bold hover:bg-orange hover:text-white cursor-pointer duration-400 sm:w-13 sm:h-13" onClick={() => handleChangeRateNote(5)}>5</button>
+          <Button value = {1} setRateNote= {setRateNote} />
+          <Button value = {2} setRateNote= {setRateNote} />
+          <Button value = {3} setRateNote= {setRateNote} />
+          <Button value = {4} setRateNote= {setRateNote} />
+          <Button value = {5} setRateNote= {setRateNote} />
         </div>
   
         <button onClick={handleSubmit} className="bg-orange w-full py-3 rounded-3xl uppercase font-bold tracking-1 hover:bg-white hover:text-orange duration-400 cursor-pointer">Submit</button>
